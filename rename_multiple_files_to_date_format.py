@@ -1,26 +1,27 @@
-# Python 3 code to rename multiple files in same directory
+"""
+Python 3 code to rename multiple files in same directory
 
-# by default only images (.jpg, .png, .jpeg)
-# that have time ((year, month, day, hour, minute, second) are required)
-# in there name like (screen_shot_2020-02-02_12-25-31) will be renamed to just "date" like (2020-02-02_12-25-31)
-# files that have not full date (2020-02-02_12-25-31) in there name (like 'abc32154efg') will not change
-# but there is an exception. (refer to 'note' of 'is_valid_filename' method description)
+by default only images (.jpg, .png, .jpeg)
+that have time ((year, month, day, hour, minute, second) are required)
+in there name like (screen_shot_2020-02-02_12-25-31) will be renamed to just "date" like (2020-02-02_12-25-31)
+files that have not full date (2020-02-02_12-25-31) in there name (like 'abc32154efg') will not change
+but there is an exception. (refer to 'note' of 'is_valid_filename' method description)
 
-# here is some examples:
-# 'Annotation 2020-10-13 121750.png' => '2020-10-13_12-17-50.png'
-# 'Screenshot_20151013-111412.jpg' => '2015-10-13_11-14-12.jpg'
-# 'Image_14' => won't change (because a date format not found)
+here is some examples:
+'Annotation 2020-10-13 121750.png' => '2020-10-13_12-17-50.png'
+'Screenshot_20151013-111412.jpg' => '2015-10-13_11-14-12.jpg'
+'Image_14' => won't change (because a date format not found)
 
-# here is an example of app harm: (be careful)
-# 'person_with_id_20181013111412.png' => '2018-10-13_11-14-12.png'
-# so just work with files that created with date included in name format like
-# phone camera picturs, screen shots and ...! (if you change reqired extension to somthing like '.mp4' it works too)
+here is an example of app harm: (be careful)
+'person_with_id_20181013111412.png' => '2018-10-13_11-14-12.png'
+so just work with files that created with date included in name format like
+phone camera picturs, screen shots and ...! (if you change reqired extension to somthing like '.mp4' it works too)
 
-# 'person_with_id_20501013111412.png' => won't change (because date format does not make sense if you are in 2020)
+'person_with_id_20501013111412.png' => won't change (because date format does not make sense if you are in 2020)
 
+Files renamed by this program could not be undo so create a back up before run :))))
 
-# Files renamed by this program could not be undo so create a back up before run :))))
-
+"""
 
 # importing os module to work with operating system
 import os
