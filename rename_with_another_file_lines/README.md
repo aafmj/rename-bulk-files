@@ -1,0 +1,1 @@
+rename files order by name in the directory with each line of file.
